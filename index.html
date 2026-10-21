@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tacos Don Rigo: tacos, quesadillas, tortas y bebidas.">
+    <title>Tacos Don Rigo | Sabor mexicano</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#inicio" class="logo">
+            <span class="logo-icono">🌮</span>
+            <span>TACOS <strong>DON RIGO</strong></span>
+        </a>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#carrito">Mi pedido 🛒 <span id="contador">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada" id="inicio">
+            <div class="portada-contenido">
+                <span class="etiqueta">SABOR QUE SE DISFRUTA</span>
+                <h1>¡QUÉ BUENOS<br><span>TACOS!</span></h1>
+                <p>Tacos, quesadillas y tortas preparados para disfrutar el auténtico sabor mexicano.</p>
+                <a href="#menu" class="boton boton-amarillo">VER MENÚ</a>
+            </div>
+            <div class="portada-imagen">
+                <img
+                    src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Tacos preparados"
+                >
+            </div>
+        </section>
+
+        <section class="beneficios">
+            <div>🌮 <strong>Buen sabor</strong></div>
+            <div>🔥 <strong>Recién preparado</strong></div>
+            <div>📱 <strong>Pedidos por WhatsApp</strong></div>
+        </section>
+
+        <section class="seccion-menu" id="menu">
+            <div class="titulo-seccion">
+                <span>NUESTRO SABOR</span>
+                <h2>MENÚ</h2>
+                <p>Elige tus favoritos y agrégalos a tu pedido.</p>
+            </div>
+
+            <div class="categorias">
+                <button class="filtro activo" data-categoria="todos">Todo</button>
+                <button class="filtro" data-categoria="tacos">Tacos</button>
+                <button class="filtro" data-categoria="quesadillas">Quesadillas</button>
+                <button class="filtro" data-categoria="tortas">Tortas</button>
+                <button class="filtro" data-categoria="bebidas">Bebidas</button>
+            </div>
+
+            <div class="productos" id="productos">
+
+                <article class="producto" data-categoria="tacos">
+                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=600&q=80" alt="Tacos de res">
+                    <div class="producto-info">
+                        <span class="categoria-texto">TACOS</span>
+                        <h3>Tacos de res</h3>
+                        <p>Deliciosos tacos con carne de res.</p>
+                        <div class="producto-pie">
+                            <strong>$15 MXN</strong>
+                            <button class="agregar" data-id="1">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="tacos">
+                    <img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=600&q=80" alt="Tacos de adobada">
+                    <div class="producto-info">
+                        <span class="categoria-texto">TACOS</span>
+                        <h3>Tacos de adobada</h3>
+                        <p>Carne adobada con mucho sabor.</p>
+                        <div class="producto-pie">
+                            <strong>$15 MXN</strong>
+                            <button class="agregar" data-id="2">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="quesadillas">
+                    <img src="https://images.unsplash.com/photo-1618040996337-56904b7850b9?auto=format&fit=crop&w=600&q=80" alt="Quesadilla de res">
+                    <div class="producto-info">
+                        <span class="categoria-texto">QUESADILLAS</span>
+                        <h3>Quesadilla de res</h3>
+                        <p>Quesadilla preparada con carne de res.</p>
+                        <div class="producto-pie">
+                            <strong>$48 MXN</strong>
+                            <button class="agregar" data-id="3">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="quesadillas">
+                    <img src="https://images.unsplash.com/photo-1618040996337-56904b7850b9?auto=format&fit=crop&w=600&q=80" alt="Quesadilla de adobada">
+                    <div class="producto-info">
+                        <span class="categoria-texto">QUESADILLAS</span>
+                        <h3>Quesadilla de adobada</h3>
+                        <p>Quesadilla con carne adobada.</p>
+                        <div class="producto-pie">
+                            <strong>$48 MXN</strong>
+                            <button class="agregar" data-id="4">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="tortas">
+                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=600&q=80" alt="Torta de res">
+                    <div class="producto-info">
+                        <span class="categoria-texto">TORTAS</span>
+                        <h3>Torta de res</h3>
+                        <p>Pan y carne de res para disfrutar.</p>
+                        <div class="producto-pie">
+                            <strong>$50 MXN</strong>
+                            <button class="agregar" data-id="5">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="tortas">
+                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=600&q=80" alt="Torta de adobada">
+                    <div class="producto-info">
+                        <span class="categoria-texto">TORTAS</span>
+                        <h3>Torta de adobada</h3>
+                        <p>Una torta con deliciosa carne adobada.</p>
+                        <div class="producto-pie">
+                            <strong>$50 MXN</strong>
+                            <button class="agregar" data-id="6">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="bebidas">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Bebida de medio litro">
+                    <div class="producto-info">
+                        <span class="categoria-texto">BEBIDAS</span>
+                        <h3>Bebida de 1/2 litro</h3>
+                        <p>Elige tu bebida al hacer el pedido.</p>
+                        <div class="producto-pie">
+                            <strong>$25 MXN</strong>
+                            <button class="agregar" data-id="7">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto" data-categoria="bebidas">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80" alt="Bebida de un litro">
+                    <div class="producto-info">
+                        <span class="categoria-texto">BEBIDAS</span>
+                        <h3>Bebida de 1 litro</h3>
+                        <p>Elige tu bebida al hacer el pedido.</p>
+                        <div class="producto-pie">
+                            <strong>$30 MXN</strong>
+                            <button class="agregar" data-id="8">+ Agregar</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="seccion-carrito" id="carrito">
+            <div class="titulo-seccion">
+                <span>PREPARA TU ORDEN</span>
+                <h2>MI PEDIDO 🛒</h2>
+                <p>Revisa tu pedido antes de enviarlo por WhatsApp.</p>
+            </div>
+
+            <div class="carrito-contenedor">
+                <div id="lista-carrito">
+                    <p class="carrito-vacio">Tu carrito está vacío. ¡Agrega algo del menú!</p>
+                </div>
+
+                <div class="carrito-total">
+                    <span>Total del pedido:</span>
+                    <strong id="total">$0 MXN</strong>
+                </div>
+
+                <label for="nombre-cliente">Tu nombre</label>
+                <input type="text" id="nombre-cliente" placeholder="Escribe tu nombre">
+
+                <label for="direccion-cliente">Dirección para entrega (si aplica)</label>
+                <input type="text" id="direccion-cliente" placeholder="Calle, número y colonia">
+
+                <label for="notas-cliente">Indicaciones o bebidas elegidas</label>
+                <textarea id="notas-cliente" rows="3" placeholder="Ej. 2 aguas de jamaica, sin cebolla..."></textarea>
+
+                <div class="botones-carrito">
+                    <button id="vaciar-carrito" class="boton boton-secundario">Vaciar carrito</button>
+                    <button id="enviar-whatsapp" class="boton boton-whatsapp">Enviar pedido por WhatsApp</button>
+                </div>
+                <p class="aviso">El pedido se enviará a WhatsApp para confirmar disponibilidad y entrega.</p>
+            </div>
+        </section>
+
+        <section class="ubicacion" id="ubicacion">
+            <div>
+                <span>¡TE ESPERAMOS!</span>
+                <h2>Tacos Don Rigo</h2>
+                <p>📍 Francisco Villa 40</p>
+                <p>📲 Pedidos por WhatsApp</p>
+                <a class="boton boton-amarillo" href="https://wa.me/523411579078" target="_blank" rel="noopener">CONTACTAR</a>
+            </div>
+            <div class="ubicacion-icono">🌮</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌮 <strong>Tacos Don Rigo</strong></p>
+        <p>Hecho con sabor mexicano.</p>
+        <p>© <span id="anio"></span> Tacos Don Rigo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
